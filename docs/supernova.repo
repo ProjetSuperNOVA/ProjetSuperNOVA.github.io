@@ -1,0 +1,7 @@
+[supernova]
+name=SuperNOVA RPM Repository
+baseurl=https://ProjetSuperNOVA.github.io/repo/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=https://ProjetSuperNOVA.github.io/keys/RPM-GPG-KEY-SuperNOVA
+repo_gpgcheck=0
