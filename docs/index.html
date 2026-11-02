@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SuperNOVA RPM Repository / Dépôt RPM SuperNOVA</title>
+</head>
+<body>
+
+<h1>SuperNOVA</h1>
+<p>Official RPM repository / Dépôt RPM officiel</p>
+<p><a href="#en">English</a> | <a href="#fr">Français</a></p>
+
+<hr>
+
+<section id="en" lang="en">
+<h2>English</h2>
+
+<p>This is the update repository for the SuperNOVA game console (Fedora bootc) and related projects.</p>
+
+<h3>Repository file</h3>
+<pre>
+curl -fsSL https://repo.example.org/supernova.repo -o /etc/yum.repos.d/supernova.repo
+</pre>
+<p>Or open it directly: <a href="/supernova.repo">supernova.repo</a></p>
+
+<h3>In your bootc image (recommended)</h3>
+<p>Add this to your Containerfile:</p>
+<pre>
+RUN curl -fsSL https://repo.example.org/supernova.repo -o /etc/yum.repos.d/supernova.repo
+RUN dnf install -y PACKAGE
+</pre>
+
+<h3>On a running console (temporary until reboot)</h3>
+<pre>
+sudo dnf install --transient PACKAGE
+</pre>
+
+<h3>Check the repository</h3>
+<pre>
+dnf repolist
+curl -fsSI https://repo.example.org/x86_64/repodata/repomd.xml
+</pre>
+
+<h3>Architectures</h3>
+<ul>
+<li>x86_64: <a href="/x86_64/">/x86_64/</a></li>
+</ul>
+</section>
+
+<hr>
+
+<section id="fr" lang="fr">
+<h2>Français</h2>
+
+<p>Ceci est le dépôt de mises à jour de la console de jeu SuperNOVA (Fedora bootc) et des projets associés.</p>
+
+<h3>Fichier du dépôt</h3>
+<pre>
+curl -fsSL https://repo.example.org/supernova.repo -o /etc/yum.repos.d/supernova.repo
+</pre>
+<p>Ou ouvrez-le directement : <a href="/supernova.repo">supernova.repo</a></p>
+
+<h3>Dans votre image bootc (recommandé)</h3>
+<p>Ajoutez ceci à votre Containerfile :</p>
+<pre>
+RUN curl -fsSL https://repo.example.org/supernova.repo -o /etc/yum.repos.d/supernova.repo
+RUN dnf install -y PACKAGE
+</pre>
+
+<h3>Sur une console en fonctionnement (temporaire jusqu'au redémarrage)</h3>
+<pre>
+sudo dnf install --transient PACKAGE
+</pre>
+
+<h3>Vérifier le dépôt</h3>
+<pre>
+dnf repolist
+curl -fsSI https://repo.example.org/x86_64/repodata/repomd.xml
+</pre>
+
+<h3>Architectures</h3>
+<ul>
+<li>x86_64 : <a href="/x86_64/">/x86_64/</a></li>
+</ul>
+</section>
+
+<hr>
+
+<footer>
+<p>SuperNOVA Project - Open Source Forever. / Projet SuperNOVA - Open Source pour toujours.</p>
+</footer>
+
+</body>
+</html>
